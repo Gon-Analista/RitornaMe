@@ -9,11 +9,21 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("content").classList.remove("d-none");
     }
   }
+
   images.forEach(function (img) {
     img.addEventListener('load', imageLoaded);
     img.addEventListener('error', imageLoaded); 
   });
 
-  document.querySelector('.loader-logo-container').style.clipPath = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)';
-  document.querySelector('.loader-logo').style.opacity = '1';
+  setTimeout(function () {
+    document.querySelector('.loader-logo-container').style.clipPath = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)';
+    document.querySelector('.loader-logo').style.opacity = '1';
+  }, 100);
+});
+
+window.addEventListener('pageshow', function (event) {
+  if (event.persisted) {
+
+    window.location.reload();
+  }
 });
