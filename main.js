@@ -1,12 +1,8 @@
-function DetectarDisp() {
-    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-    return regex.test(navigator.userAgent);
-}
-
-if (DetectarDisp()) {
-    movil.style.display = "block";
-    QR.style.display = "none";
-} else {
-    movil.style.display = "none";
-    QR.style.display = "block";
-}
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+    document.getElementById("loader-wrapper").style.display = "none";
+    document.getElementById("content").classList.remove("d-none");
+  }, 3000);
+  document.querySelector('.loader-logo-container').style.clipPath = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)';
+  document.querySelector('.loader-logo').style.opacity = '1';
+});

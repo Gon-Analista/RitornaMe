@@ -3,18 +3,39 @@ body, html {
   padding: 0;
 }
 
-#menu-container {
+#loader-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  margin: 0;
+  z-index: 1000;
+  overflow: hidden;
 }
 
-#menu-container img {
+#loader {
+  text-align: center;
+  overflow: hidden;
+}
+
+.loader-logo-container {
+  position: relative;
+  width: 310px; 
+  height: 310px; 
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  transition: clip-path 3s ease; 
+}
+
+.loader-logo {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin: 0;
+  height: 100%;
+  opacity: 0;
+}
+
+.loader-text {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-top: 10px;
 }

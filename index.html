@@ -4,20 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú de Pizzería</title>
-  <!-- Agrega la referencia a Bootstrap CSS -->
+  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <div id="loader-wrapper">
+        <div id="loader">
+          <div class="loader-logo-container">
+            <img src="assets/logo-sticker.png" alt="Logo" class="loader-logo">
+            <div class="loader-logo-fill"></div>
+          </div>
+          <div class="loader-text">Benvenuto...</div>
+        </div>
+      </div>
+    
+<div id="content" class="d-none">
   <div id="menu-container" class="d-flex flex-column align-items-center">
     <img id="menu-image-1" src="assets/menu.png" alt="Menú 1" class="img-fluid">
     <img id="menu-image-2" src="assets/agregados.png" alt="Menú 2" class="img-fluid">
   </div>
+</div>
 
   <!-- Agrega la referencia a Bootstrap JS y Popper.js (necesarios para algunas funciones de Bootstrap) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  
   <script src="main.js"></script>
 </body>
 </html>
